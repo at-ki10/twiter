@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-body py-4 px-7">
-        <p>{{ $tweet->content }}</p>
+    <p>{{ $tweet->content }}</p>
     </div>
    <div class="card-actions p-4 pt-0 flex justify-between items-center">
     @if (request()->routeIs('home'))
