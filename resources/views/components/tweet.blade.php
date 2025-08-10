@@ -39,7 +39,7 @@
     </div>
 </div>
 @if (request()->routeIs('tweet.view'))
-    <div class="ms-6 ps-2 space-y-2 border-s-2">
+    <div class="ms-6 ps-2 space-y-2 border-s-5">
         @foreach ($tweet->childTweets as $childTweet)
             <x-tweet :tweet="$childTweet" />
         @endforeach
