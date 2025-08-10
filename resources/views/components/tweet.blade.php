@@ -16,12 +16,14 @@
             <span class="icon-[tabler--message]"></span>
         </a>
         @else
-                 <button
-        onclick="document.querySelector(`input[name='parent_tweet_id']`) .value = {{ $tweet->id }}"
-           
-            class="btn btn-text btn-square"
-        >
-            <span class="icon-[tabler--message]"></span>
+<button 
+    onclick="
+        document.querySelector(`input[name='parent_tweet_id']`).value = '{{ $tweet->id }}';
+        document.querySelector(`#content`).placeholder = 'ردًا على {{ $tweet->user->name }}';
+        document.querySelector(`#content`).focus();
+    "
+    class="btn btn-text  btn-square">
+    <span class="icon-[tabler--message] size-6 mx-2"></span>
 </button>
 
     @endif

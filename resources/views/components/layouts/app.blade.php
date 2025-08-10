@@ -53,7 +53,7 @@
     <form method="post" action="{{ route('tweet.create') }}"
         class="border border-base-200 border-t-2 border-t-primary rounded-field sticky bottom-4 drop-shadow-2xl bg-base-100">
         @csrf
-        <input type="hidden" name="parent_tweet_id" value="{{ request()->tweet?->id }}"/>
+        <input type="hidden" name="parent_tweet_id" id="parent_tweet_id" value=""/>
         <div class="textarea-floating">
             <textarea required class="textarea border-0 resize-none" placeholder="شارك افكارك" id="content"
                 name="content"></textarea>
@@ -70,4 +70,12 @@
             </button>
         </div>
     </form>
+    <textarea 
+    id="content"
+    name="content" 
+    placeholder=""
+    class="">
+    {{ old('content') }}
+</textarea>
+    
 </x-layouts.default>
